@@ -1,0 +1,19 @@
+without user id and name display the post,
+	user_res:--->id(primary key), name, email, phone, dob, pass, repass, created
+	post-2:----->id(primary key), user_id(forgin key), file, decreption, created
+
+	$insert_img_values = "INSERT INTO post2(user_id, descreption, file) 
+									VALUES ('$user_id','$descreption', '$storage_path')";
+			$connect_q1 = $conn->query($insert_img_values);
+
+
+
+
+
+with user id and name display the post,
+	user_res:--->id(primary key), name, email, phone, dob, pass, repass, created
+	post-2:----->id(primary key), user_id(forgin key), user_name(forgin key), file, decreption, created
+
+	$insert_img_values = "INSERT INTO post2(user_id, user_name, descreption, file) 
+									VALUES ('$user_id','$user_name' ,'$descreption', '$storage_path')";
+			$connect_q1 = $conn->query($insert_img_values);
